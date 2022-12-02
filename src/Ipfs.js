@@ -1,12 +1,12 @@
 import { Web3Storage, File } from "web3.storage";
 import { Buffer } from "buffer";
 export const Ipfs = async ({ data }) => {
-  let reader = new FileReader();
-  reader.onloadend = function () {
-    console.log("RESULT", reader.result);
-  };
-  const a=reader.readAsDataURL(data.picture);
-  console.log("RESULT2", a);
+  // let reader = new FileReader();
+  // reader.onloadend = function () {
+  //   console.log("RESULT", reader.result);
+  // };
+  // const a=reader.readAsDataURL(data.picture);
+  // console.log("RESULT2", a);
   try {
     const files = await makeFileObjects(data);
     const cid = await storeFiles(files);
